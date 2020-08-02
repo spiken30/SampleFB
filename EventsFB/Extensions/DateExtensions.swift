@@ -27,7 +27,7 @@ extension DateFormatter {
       return formatter
     }()
     
-    static let timeDate: DateFormatter = {
+    static let shortTimeDate: DateFormatter = {
       let formatter = DateFormatter()
       formatter.dateFormat = "h:mm a"
       formatter.calendar = Calendar(identifier: .iso8601)

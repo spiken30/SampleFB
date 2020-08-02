@@ -36,7 +36,8 @@ class EventsTableViewController: UITableViewController, EventViewDelegate {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EventCell", for: indexPath) as! EventTableViewCell
-        let event = self.agenda[indexPath.section].events[indexPath.row]
+        let agendaItem = self.agenda[indexPath.section]
+        let event = agendaItem.events[indexPath.row]
         
         cell.titleLabel.text = event.title
         cell.timeLabel.text = "\(event.startTime) – \(event.endTime)"

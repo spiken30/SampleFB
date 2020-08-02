@@ -12,14 +12,13 @@ class Event: Codable {
     var title: String
     var start: Date
     var end: Date
-    var overlaps: Bool?
     var date: String {
         return DateFormatter.shortDate.string(from: self.start)
     }
     var startTime: String {
-        return DateFormatter.timeDate.string(from: self.start)
+        return DateFormatter.shortTimeDate.string(from: self.start)
     }
     var endTime: String {
-        return DateFormatter.timeDate.string(from: self.end)
+        return DateFormatter.shortTimeDate.string(from: self.end)
     }
 }
